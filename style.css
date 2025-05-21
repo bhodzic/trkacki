@@ -13,6 +13,15 @@ body {
     align-items: center;
 }
 
+.title-header {
+    font-size: 26px;
+    font-weight: bold;
+    color: #5e4b8b;
+    margin-top: 10px;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+}
+
 .data-container {
     width: 100%;
     max-width: 900px;
@@ -52,9 +61,7 @@ body {
     font-weight: bold;
 }
 
-.event-info {
-    
-}
+.event-info {}
 
 .event-title {
     font-size: 18px;
