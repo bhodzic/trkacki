@@ -144,7 +144,8 @@ button {
     width: 200px;
 }
 
-#month-filter:focus {
+#month-filter:focus,
+#country-filter:focus {
     outline: none;
     border-color: #6a4c9c;
     /* Purple border on focus */
