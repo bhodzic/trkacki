@@ -1,9 +1,4 @@
 
-// Function to format date to dd/mm/yyyy
-function formatDate(date) {
-    return date;
-}
-
 // Function to group events by month
 function groupEventsByMonth(events) {
     return events.reduce((result, event) => {
@@ -35,11 +30,7 @@ function displayGroupedEvents(groupedEvents) {
             const eventCard = document.createElement("div");
             eventCard.classList.add("event-card");
 
-            const eventDate = document.createElement("div");
-            eventDate.classList.add("event-date");
-            eventDate.textContent = formatDate(event.date); // Apply the date format
-
-            const eventDateDiv = `<div class="event-date-wrapper"><i class="far fa-calendar-alt"></i><span class="event-date">${formatDate(event.date)}</span><div>`;
+            const eventDateDiv = `<div class="event-date-wrapper"><i class="far fa-calendar-alt"></i><span class="event-date">${event.date}</span><div>`;
 
             const eventInfo = document.createElement("div");
             eventInfo.classList.add("event-info");
@@ -69,6 +60,9 @@ function clearFilters() {
 
     // Reset the month filter dropdown
     document.getElementById('month-filter').value = '';
+
+    // Reset the country filter dropdown
+    document.getElementById('country-filter').value = '';
 
     // Show all events (without any filter)
     filterEvents();
