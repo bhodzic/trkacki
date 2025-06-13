@@ -81,13 +81,15 @@ document.getElementById('show-all-btn').addEventListener('click', clearFilters);
 function filterEvents() {
     const searchQuery = document.getElementById('search').value || '';
     const selectedMonth = document.getElementById('month-filter').value;
+    const selectedCountry = document.getElementById('country-filter').value;
 
     const filteredEvents = data.filter(event => {
         const eventMonth = getMonth(event.date)
         const matchesSearch = event.name.toLowerCase().includes(searchQuery.toLowerCase());
         const matchesMonth = selectedMonth ? eventMonth === selectedMonth : true;
+        const matchesCountry = selectedCountry ? selectedCountry === event.country : true;
 
-        return matchesSearch && matchesMonth;
+        return matchesSearch && matchesMonth && matchesCountry;
     });
 
     const groupedEvents = groupEventsByMonth(filteredEvents);
@@ -114,6 +116,7 @@ function getMonth(date) {
     return monthMapping[month];
 }
 
+
 // Function to populate the month filter dropdown
 function populateMonthFilter() {
     const months = [...new Set(data.map(event => getMonth(event.date)))];
@@ -127,11 +130,32 @@ function populateMonthFilter() {
     });
 }
 
+const COUNTRIES = {
+    "ser": "Srbija",
+    "cro": "Hrvatska"
+}
+
+function populateCountryFilter() {
+    const uniqueCountries = [...new Set(data.map(item => item.country))];
+
+    const countryFilter = document.getElementById("country-filter");
+
+    uniqueCountries.forEach(country => {
+        const option = document.createElement("option");
+        option.value = country;
+        option.textContent = COUNTRIES[country];
+        countryFilter.appendChild(option);
+    });
+
+}
+
 // Initialize and display grouped events
 populateMonthFilter();
+populateCountryFilter();
 
 displayGroupedEvents(groupEventsByMonth(data));
 
 // Event listeners for search and month filter
 document.getElementById('search').addEventListener('input', filterEvents);
 document.getElementById('month-filter').addEventListener('change', filterEvents);
+document.getElementById('country-filter').addEventListener('change', filterEvents);

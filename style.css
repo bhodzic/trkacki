@@ -132,8 +132,9 @@ button {
     /* Purple border on focus */
 }
 
-/* Styles for the month dropdown */
-#month-filter {
+/* Styles for the month and country dropdown */
+#month-filter,
+#country-filter {
     padding: 10px;
     font-size: 16px;
     border-radius: 8px;
@@ -186,7 +187,8 @@ button {
     }
 
     #search,
-    #month-filter {
+    #month-filter,
+    #country-filter {
         width: 100%;
     }
 
