@@ -1,3 +1,33 @@
+const COUNTRIES = {
+    "ser": "Srbija",
+    "cro": "Hrvatska"
+}
+
+function getMonth(date) {
+    let month = date.slice(-8, -6);
+    const monthMapping = {
+        '01': 'Januar',
+        '02': 'Februar',
+        '03': 'Mart',
+        '04': 'April',
+        '05': 'Maj',
+        '06': 'Jun',
+        '07': 'Jul',
+        '08': 'Avgust',
+        '09': 'Septembar',
+        '10': 'Oktobar',
+        '11': 'Novembar',
+        '12': 'Decembar'
+    }
+    return monthMapping[month];
+}
+
+function parseCustomDate(dateStr) {
+    // Remove the trailing dot and split by dot
+    const [day, month, year] = dateStr.replace(/\.$/, '').split('.').map(Number);
+    // Note: JavaScript months are 0-based (0 = January, 11 = December)
+    return new Date(year, month - 1, day);
+}
 
 // Function to group events by month
 function groupEventsByMonth(events) {
@@ -90,27 +120,6 @@ function filterEvents() {
     displayGroupedEvents(groupedEvents);
 }
 
-
-function getMonth(date) {
-    let month = date.slice(-8, -6);
-    const monthMapping = {
-        '01': 'Januar',
-        '02': 'Februar',
-        '03': 'Mart',
-        '04': 'April',
-        '05': 'Maj',
-        '06': 'Jun',
-        '07': 'Jul',
-        '08': 'Avgust',
-        '09': 'Septembar',
-        '10': 'Oktobar',
-        '11': 'Novembar',
-        '12': 'Decembar'
-    }
-    return monthMapping[month];
-}
-
-
 // Function to populate the month filter dropdown
 function populateMonthFilter() {
     const months = [...new Set(data.map(event => getMonth(event.date)))];
@@ -122,11 +131,6 @@ function populateMonthFilter() {
         option.textContent = month;
         monthFilter.appendChild(option);
     });
-}
-
-const COUNTRIES = {
-    "ser": "Srbija",
-    "cro": "Hrvatska"
 }
 
 function populateCountryFilter() {
@@ -143,11 +147,16 @@ function populateCountryFilter() {
 
 }
 
-// Initialize and display grouped events
-populateMonthFilter();
-populateCountryFilter();
+const freshData = data.filter(event => {
+    let today = new Date();
+    return (parseCustomDate(event.date) - today > 0)
+});
 
-displayGroupedEvents(groupEventsByMonth(data));
+// Initialize and display grouped events
+populateMonthFilter(freshData);
+populateCountryFilter(freshData);
+
+displayGroupedEvents(groupEventsByMonth(freshData));
 
 // Event listeners for search and month filter
 document.getElementById('search').addEventListener('input', filterEvents);
