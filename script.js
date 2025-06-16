@@ -1,6 +1,7 @@
 const COUNTRIES = {
     "ser": "Srbija",
-    "cro": "Hrvatska"
+    "cro": "Hrvatska",
+    "bih": "BiH"
 }
 
 function getMonth(date) {
