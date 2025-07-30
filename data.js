@@ -1,241 +1,4 @@
-const data = [
-  {
-    "name": "Shoot To Thrill Episode 4",
-    "date": "21.06.2025.",
-    "url": "https://gb3timing.com/dogadjaj/shoot-to-thrill-episode-4/",
-    "country": "bih"
-  },
-  {
-    "name": "ČK10 - Čakovečki noćni cener 2025.",
-    "date": "21.06.2025.",
-    "url": "https://utrka.com/utrke/cakoveccener/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "16. Trka prijateljstva Kula",
-    "date": "21.06.2025.",
-    "url": "https://trka.rs/events/644-16-trka-prijateljstva-kula/",
-    "country": "ser"
-  },
-  {
-    "name": "Stazama prirode OCR i trail challenge Grza",
-    "date": "21.06.2025.",
-    "url": "https://trka.rs/events/637-stazama-prirode-ocr-i-trail-challenge-grza/",
-    "country": "ser"
-  },
-  {
-    "name": "Ultramaraton - Last one alive Gusinje",
-    "date": "21.06.2025.",
-    "url": "https://live.3hercegnovi.me/event/LOA25/register",
-    "country": "ser"
-  },
-  {
-    "name": "Durrador 2025 - Бандијерна",
-    "date": "21.06.2025.",
-    "url": "https://live.3hercegnovi.me/event/DUR25/register?fbclid=PAY2xjawIDQYpleHRuA2FlbQIxMQABpl3zmu20Zzjmz2MpLlDXYk_n4vlCJ0nY7pNyYt2RpXs5NMdvEQhhhqM9tg_aem_cOFXUxxcBKRAixuQDi6Pow",
-    "country": "ser"
-  },
-  {
-    "name": "Kajbumščak trail 2025.",
-    "date": "22.06.2025.",
-    "url": "https://utrka.com/utrke/kajbumtrail/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "Iskra trail 2025",
-    "date": "22.06.2025.",
-    "location": "Kosmaj",
-    "url": "https://runtrace.net/?event=kosmaj2025",
-    "country": "ser"
-  },
-  {
-    "name": "Duga Resa GRIN Run 2025",
-    "date": "27.06.2025.",
-    "url": "https://utrka.com/utrke/grinrun/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "2. utrka općine Belica (KUP Međimurja)",
-    "date": "28.06.2025.",
-    "url": "https://utrka.com/utrke/belica/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "6. Mala Sveta Gora",
-    "date": "28.06.2025.",
-    "url": "https://trka.rs/events/675-6-mala-sveta-gora/",
-    "country": "ser"
-  },
-  {
-    "name": "16. Noćni maraton",
-    "date": "28.06.2025.",
-    "url": "https://trka.rs/events/665-16-nocni-maraton/",
-    "country": "ser"
-  },
-  {
-    "name": "Vidovdanska 5k",
-    "date": "29.06.2025.",
-    "url": "https://gb3timing.com/dogadjaj/vidovdanska-5k/",
-    "country": "bih"
-  },
-  {
-    "name": "Triathlon Zagorje 2025.",
-    "date": "29.06.2025.",
-    "url": "https://utrka.com/utrke/triathlonzagorje/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "Robin Granfondo Koprivnica 2025.",
-    "date": "29.06.2025.",
-    "url": "https://utrka.com/utrke/granfondokoprivnica/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "12. Adrenalin Race ORDO",
-    "date": "29.06.2025.",
-    "url": "https://trka.rs/events/680-12-adrenalin-race-ordo/",
-    "country": "ser"
-  },
-  {
-    "name": "5. OK Trip Trail",
-    "date": "29.06.2025.",
-    "url": "https://trka.rs/events/676-5-ok-trip-trail/",
-    "country": "ser"
-  },
-  {
-    "name": "4. Novi Pazar Challenge Race",
-    "date": "29.06.2025.",
-    "url": "https://trka.rs/events/656-4-novi-pazar-challenge-race/",
-    "country": "ser"
-  },
-  {
-    "name": "Military experience challenge 2025",
-    "date": "29.06.2025.",
-    "location": "Beograd",
-    "url": "https://runtrace.net/?event=mec2025",
-    "country": "ser"
-  },
-  {
-    "name": "BUSOVAČKA PETICA",
-    "date": "05.07.2025.",
-    "url": "https://gb3timing.com/dogadjaj/busovacka-petica/",
-    "country": "bih"
-  },
-  {
-    "name": "Sljemenski Maraton",
-    "date": "05.07.2025.",
-    "url": "https://utrka.com/utrke/sljemenskimaraton/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "Triatlon Borovik 2025",
-    "date": "05.07.2025.",
-    "url": "https://utrka.com/utrke/triatlonborovik/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "OCR Invictus Challenge Kopaonik",
-    "date": "05.07.2025.",
-    "url": "https://trka.rs/events/604-ocr-invictus-challenge-kopaonik/",
-    "country": "ser"
-  },
-  {
-    "name": "Tara ultra trail 2025",
-    "date": "05.07.2025.",
-    "location": "Rača, Bajina Bašta",
-    "url": "https://runtrace.net/?event=tut2025",
-    "country": "ser"
-  },
-  {
-    "name": "1. Treska Trail",
-    "date": "06.07.2025.",
-    "url": "https://trka.rs/events/701-1-treska-trail/",
-    "country": "ser"
-  },
-  {
-    "name": "47. TRKA OKO AVALE",
-    "date": "06.07.2025.",
-    "url": "https://trka.rs/events/733-47-trka-oko-avale/",
-    "country": "ser"
-  },
-  {
-    "name": "20. PUSTOLOVNA UTRKA ČAPLJINA 2025",
-    "date": "12.07.2025.",
-    "url": "https://gb3timing.com/dogadjaj/20-pustolovna-utrka-capljina-2025/",
-    "country": "bih"
-  },
-  {
-    "name": "7. Noćna 10ka Zagreb i polumaraton",
-    "date": "12.07.2025.",
-    "url": "https://utrka.com/utrke/nocna10ka/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "8. utrka općine Mala Subotica - (KUP Međimurja)",
-    "date": "12.07.2025.",
-    "url": "https://utrka.com/utrke/malasubotica/2025/",
-    "country": "cro"
-  },
-  {
-    "name": "3. RUMSKI KLINCI ADRENALINCI",
-    "date": "12.07.2025.",
-    "url": "https://trka.rs/events/736-3-rumski-klinci-adrenalinci/",
-    "country": "ser"
-  },
-  {
-    "name": "2. Sova Night Trail",
-    "date": "12.07.2025.",
-    "url": "https://trka.rs/events/731-2-sova-night-trail/",
-    "country": "ser"
-  },
-  {
-    "name": "QUAD RACE PETRIĆEVAC",
-    "date": "13.07.2025.",
-    "url": "https://gb3timing.com/dogadjaj/quad-race-petricevac/",
-    "country": "bih"
-  },
-  {
-    "name": "BLIDINJE BIKE FESTIVAL 2025",
-    "date": "13.07.2025.",
-    "url": "https://gb3timing.com/dogadjaj/blidinje-bike-festival-2025/",
-    "country": "bih"
-  },
-  {
-    "name": "Hadžići 5k",
-    "date": "19.07.2025.",
-    "url": "https://gb3timing.com/dogadjaj/hadzici-5k/",
-    "country": "bih"
-  },
-  {
-    "name": "Donjovakufska petica 2025",
-    "date": "20.07.2025.",
-    "url": "https://gb3timing.com/dogadjaj/donjovakufska-petica-2025/",
-    "country": "bih"
-  },
-  {
-    "name": "Eko trail Juhor",
-    "date": "20.07.2025.",
-    "url": "https://trka.rs/events/732-eko-trail-juhor/",
-    "country": "ser"
-  },
-  {
-    "name": "8. Prokletije 2025.",
-    "date": "25.07.2025.",
-    "url": "https://trka.rs/events/617-8-prokletije-2025/",
-    "country": "ser"
-  },
-  {
-    "name": "BUGOJNO 5K dr.RINAD ZUKIĆ",
-    "date": "26.07.2025.",
-    "url": "https://gb3timing.com/dogadjaj/bugojno-5k-dr-rinad-zukic/",
-    "country": "bih"
-  },
-  {
-    "name": "4. Kraljevec Run",
-    "date": "26.07.2025.",
-    "url": "https://utrka.com/utrke/kraljevecrun/2025/",
-    "country": "cro"
-  },
+var data = [
   {
     "name": "13. Pančevački maraton",
     "date": "01.08.2025.",
@@ -243,10 +6,22 @@ const data = [
     "country": "ser"
   },
   {
+    "name": "1. Memorijalna trka 'Nađa Katana'",
+    "date": "01.08.2025.",
+    "url": "https://trka.rs/events/746-1-memorijalna-trka-na%C4%91a-katana/",
+    "country": "ser"
+  },
+  {
     "name": "8. NOĆNA ULIČNA UTRKA “KAKANJ ZA 5”",
     "date": "02.08.2025.",
     "url": "https://gb3timing.com/dogadjaj/8-nocna-ulicna-utrka-kakanj-za-5/",
     "country": "bih"
+  },
+  {
+    "name": "18. kros u park-šumi Musapstan - Zadar 2025.",
+    "date": "02.08.2025.",
+    "url": "https://utrka.com/utrke/krosmusapstan/2025/",
+    "country": "cro"
   },
   {
     "name": "OCR RS Bijeljina",
@@ -261,7 +36,7 @@ const data = [
     "country": "ser"
   },
   {
-    "name": "14. Atletska utrka \"Pozdrav domovini - Kup Oluje\" 2025",
+    "name": "14. Atletska utrka 'Pozdrav domovini - Kup Oluje' 2025",
     "date": "03.08.2025.",
     "url": "https://utrka.com/utrke/kupoluje/2025/",
     "country": "cro"
@@ -276,6 +51,12 @@ const data = [
     "name": "24. utrka Starigrad - Veliko Rujno",
     "date": "09.08.2025.",
     "url": "https://utrka.com/utrke/starigradrujno/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "2. RED RUN for Cirkovljan",
+    "date": "09.08.2025.",
+    "url": "https://utrka.com/utrke/cirkovljan/2025/",
     "country": "cro"
   },
   {
@@ -294,6 +75,36 @@ const data = [
     "name": "3. MOZZART SPARTAN BATTLE",
     "date": "16.08.2025.",
     "url": "https://gb3timing.com/dogadjaj/3-mozzart-spartan-battle/",
+    "country": "bih"
+  },
+  {
+    "name": "7. utrka Murščak općine Domašinec",
+    "date": "16.08.2025.",
+    "url": "https://utrka.com/utrke/murscakdomasinec/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "2. HUMANITARNA TRKA 'DA SE DRDA RAZMRDA'",
+    "date": "16.08.2025.",
+    "url": "https://trka.rs/events/748-2-humanitarna-trka-da-se-drda-razmrda/",
+    "country": "ser"
+  },
+  {
+    "name": "Bobija Trail",
+    "date": "16.08.2025.",
+    "url": "https://trka.rs/events/740-bobija-trail/",
+    "country": "ser"
+  },
+  {
+    "name": "MTB maraton Topusko 2025",
+    "date": "17.08.2025.",
+    "url": "https://utrka.com/utrke/graveltopusko/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "Ulična Trka Ugljevik 2025",
+    "date": "23.08.2025.",
+    "url": "https://gb3timing.com/dogadjaj/ulicna-trka-ugljevik-2025/",
     "country": "bih"
   },
   {
@@ -340,10 +151,16 @@ const data = [
     "country": "cro"
   },
   {
-    "name": "4. humanitarna utrka za udrugu Down",
+    "name": "Mačkovec (KUP Međimurja), 4. humanitarna utrka za udrugu Down",
     "date": "24.08.2025.",
     "url": "https://utrka.com/utrke/downmackovec/2025/",
     "country": "cro"
+  },
+  {
+    "name": "QUAD PANORAMA MANJAČA 2025",
+    "date": "30.08.2025.",
+    "url": "https://gb3timing.com/dogadjaj/quad-panorama-manjaca-2025/",
+    "country": "bih"
   },
   {
     "name": "Giro di Kutina 11",
@@ -356,6 +173,18 @@ const data = [
     "date": "30.08.2025.",
     "url": "https://utrka.com/utrke/grawemaraton/2025/",
     "country": "cro"
+  },
+  {
+    "name": "19. utrka grada Mursko Središće",
+    "date": "30.08.2025.",
+    "url": "https://utrka.com/utrke/murskosredisce/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "2. Ženska trka",
+    "date": "30.08.2025.",
+    "url": "https://trka.rs/events/742-2-%C5%BEenska-trka/",
+    "country": "ser"
   },
   {
     "name": "1. Stazama Sokobanje",
@@ -371,13 +200,20 @@ const data = [
     "country": "ser"
   },
   {
+    "name": "Iskra night trail Avala 2025",
+    "date": "30.08.2025.",
+    "location": "Avala",
+    "url": "https://runtrace.net/?event=nightavala2025",
+    "country": "ser"
+  },
+  {
     "name": "8. RAMSKI POLUMARATON 2025.",
     "date": "31.08.2025.",
     "url": "https://gb3timing.com/dogadjaj/8-ramski-polumaraton-2025/",
     "country": "bih"
   },
   {
-    "name": "Roller Coaster 2025",
+    "name": "Triglav osiguranje Roller Coaster",
     "date": "31.08.2025.",
     "url": "https://utrka.com/utrke/rollercoaster/2025/",
     "country": "cro"
@@ -402,15 +238,21 @@ const data = [
     "country": "bih"
   },
   {
+    "name": "29. Žumberačka utrka",
+    "date": "06.09.2025.",
+    "url": "https://utrka.com/utrke/zumberackautrka/2025/",
+    "country": "cro"
+  },
+  {
     "name": "Bermet Run 2025 - 1. kolo",
     "date": "06.09.2025.",
     "url": "https://utrka.com/utrke/bermet1kolo/2025/",
     "country": "cro"
   },
   {
-    "name": "29. Žumberačka utrka",
+    "name": "Mrka Trka 2025. - Virovitica",
     "date": "06.09.2025.",
-    "url": "https://utrka.com/utrke/zumberackautrka/2025/",
+    "url": "https://utrka.com/utrke/mrkatrka/2025/",
     "country": "cro"
   },
   {
@@ -426,19 +268,19 @@ const data = [
     "country": "ser"
   },
   {
-    "name": "Neandertalka 2025.",
-    "date": "07.09.2025.",
-    "url": "https://utrka.com/utrke/neandertalka/2025/",
-    "country": "cro"
-  },
-  {
     "name": "Petica za Rudija & utrke djece",
     "date": "07.09.2025.",
     "url": "https://utrka.com/utrke/gornjostubickicener/2025/",
     "country": "cro"
   },
   {
-    "name": "Kotoripska desetka 2025.",
+    "name": "Neandertalka 2025.",
+    "date": "07.09.2025.",
+    "url": "https://utrka.com/utrke/neandertalka/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "Kotoripska desetka 2025. (Kup Međimurja )",
     "date": "07.09.2025.",
     "url": "https://utrka.com/utrke/kotoripskih10/2025/",
     "country": "cro"
@@ -505,23 +347,35 @@ const data = [
     "country": "cro"
   },
   {
-    "name": "16. Memorijalna trka Pal Skenderović",
-    "date": "14.09.2025.",
-    "url": "https://trka.rs/events/729-16-memorijalna-trka-pal-skenderovic/",
-    "country": "ser"
-  },
-  {
     "name": "Golija trail",
     "date": "14.09.2025.",
     "url": "https://trka.rs/events/710-golija-trail/",
     "country": "ser"
   },
   {
-    "name": "4. Zemunski polumaraton",
+    "name": "16. Memorijalna trka Pal Skenderović",
+    "date": "14.09.2025.",
+    "url": "https://trka.rs/events/729-16-memorijalna-trka-pal-skenderovic/",
+    "country": "ser"
+  },
+  {
+    "name": "4. Zemunski Decathlon polumaraton",
     "date": "14.09.2025.",
     "location": "Beograd",
     "url": "https://runtrace.net/?event=zemun2025",
     "country": "ser"
+  },
+  {
+    "name": "2. BROĆANSKA DESETKA",
+    "date": "20.09.2025.",
+    "url": "https://gb3timing.com/dogadjaj/2-brocanska-desetka/",
+    "country": "bih"
+  },
+  {
+    "name": "TRKA 5 MLINOVA 2025",
+    "date": "20.09.2025.",
+    "url": "https://gb3timing.com/dogadjaj/trka-5-mlinova-2025/",
+    "country": "bih"
   },
   {
     "name": "One Rep More - Hybrid throwdown",
@@ -542,9 +396,9 @@ const data = [
     "country": "cro"
   },
   {
-    "name": "SOMBORSKA DESETKA – 2. trka nordijskog hodanja",
+    "name": "7. Rumski polumaraton",
     "date": "20.09.2025.",
-    "url": "https://trka.rs/events/726-somborska-desetka-2-trka-nordijskog-hodanja/",
+    "url": "https://trka.rs/events/727-7-rumski-polumaraton/",
     "country": "ser"
   },
   {
@@ -554,9 +408,9 @@ const data = [
     "country": "ser"
   },
   {
-    "name": "7. Rumski polumaraton",
+    "name": "SOMBORSKA DESETKA – 2. trka nordijskog hodanja",
     "date": "20.09.2025.",
-    "url": "https://trka.rs/events/727-7-rumski-polumaraton/",
+    "url": "https://trka.rs/events/726-somborska-desetka-2-trka-nordijskog-hodanja/",
     "country": "ser"
   },
   {
@@ -565,6 +419,12 @@ const data = [
     "location": "Beograd",
     "url": "https://runtrace.net/?event=radmilovac2025",
     "country": "ser"
+  },
+  {
+    "name": "MEĐUNARODNA ULIČNA TRKA BIJELJINA 2025",
+    "date": "21.09.2025.",
+    "url": "https://gb3timing.com/dogadjaj/medjunarodna-ulicna-trka-bijeljina-2025/",
+    "country": "bih"
   },
   {
     "name": "Ston wall marathon 2025.",
@@ -585,9 +445,29 @@ const data = [
     "country": "ser"
   },
   {
+    "name": "Mangulica trail 2025",
+    "date": "21.09.2025.",
+    "location": "Bojčinska šuma",
+    "url": "https://runtrace.net/?event=mangulica2025",
+    "country": "ser"
+  },
+  {
+    "name": "Rudnik trail 2025",
+    "date": "21.09.2025.",
+    "location": "Rudnik",
+    "url": "https://runtrace.net/?event=rudnik2025",
+    "country": "ser"
+  },
+  {
     "name": "B2Run Zagreb",
     "date": "25.09.2025.",
     "url": "https://utrka.com/utrke/b2bzagreb/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "AUDI B2B RUN - Sarajevo 2025.",
+    "date": "25.09.2025.",
+    "url": "https://utrka.com/utrke/b2bsarajevo/2025/",
     "country": "cro"
   },
   {
@@ -606,6 +486,12 @@ const data = [
     "name": "9. Жупска винска трка",
     "date": "27.09.2025.",
     "url": "https://trka.rs/events/679-9/",
+    "country": "ser"
+  },
+  {
+    "name": "1. AZBUKA IZAZOV",
+    "date": "27.09.2025.",
+    "url": "https://trka.rs/events/749-1-azbuka-izazov/",
     "country": "ser"
   },
   {
@@ -666,8 +552,20 @@ const data = [
   {
     "name": "Jesenji Tribalion 2025",
     "date": "04.10.2025.",
-    "location": "",
+    "location": "Mitrovac, Tara",
     "url": "https://runtrace.net/?event=14tribalion",
+    "country": "ser"
+  },
+  {
+    "name": "VISORAVAN TRAIL 2025",
+    "date": "05.10.2025.",
+    "url": "https://gb3timing.com/dogadjaj/visoravan-trail-2025/",
+    "country": "bih"
+  },
+  {
+    "name": "9. Zrenjaninski polumaraton",
+    "date": "05.10.2025.",
+    "url": "https://trka.rs/events/716-9-zrenjaninski-polumaraton/",
     "country": "ser"
   },
   {
@@ -677,9 +575,9 @@ const data = [
     "country": "ser"
   },
   {
-    "name": "9. Zrenjaninski polumaraton",
+    "name": "13. Kragujevački polumaraton",
     "date": "05.10.2025.",
-    "url": "https://trka.rs/events/716-9-zrenjaninski-polumaraton/",
+    "url": "https://trka.rs/events/738-13-kragujeva%C4%8Dki-polumaraton/",
     "country": "ser"
   },
   {
@@ -689,10 +587,35 @@ const data = [
     "country": "ser"
   },
   {
+    "name": "TRČIMO ZA ŽIVOT",
+    "date": "11.10.2025.",
+    "url": "https://trka.rs/events/745-tr%C4%8Dimo-za-%C5%BEivot/",
+    "country": "ser"
+  },
+  {
     "name": "UKRUG ULTRA - Tara 2025",
     "date": "11.10.2025.",
     "location": "Mitrovac, Tara",
     "url": "https://runtrace.net/?event=ukrug2025",
+    "country": "ser"
+  },
+  {
+    "name": "6. Trail utrka Nacionalni park Una",
+    "date": "12.10.2025.",
+    "url": "https://gb3timing.com/dogadjaj/6-trail-utrka-nacionalni-park-una/",
+    "country": "bih"
+  },
+  {
+    "name": "4. Trka Lazaro Kardenasa",
+    "date": "12.10.2025.",
+    "url": "https://trka.rs/events/750-4-trka-lazaro-kardenasa/",
+    "country": "ser"
+  },
+  {
+    "name": "Svilajnački polumaraton 2025",
+    "date": "12.10.2025.",
+    "location": "Svilajnac",
+    "url": "https://runtrace.net/?event=svilajnac2025",
     "country": "ser"
   },
   {
@@ -708,6 +631,13 @@ const data = [
     "country": "ser"
   },
   {
+    "name": "Titan OCR 2025",
+    "date": "18.10.2025.",
+    "location": "Goč",
+    "url": "https://runtrace.net/?event=titanocr2025",
+    "country": "ser"
+  },
+  {
     "name": "Zabok Industrial Race 2025",
     "date": "19.10.2025.",
     "url": "https://utrka.com/utrke/zaindustrial/2025/",
@@ -718,6 +648,12 @@ const data = [
     "date": "19.10.2025.",
     "url": "https://dunavskipolumaraton.com/prijave/",
     "country": "ser"
+  },
+  {
+    "name": "3. SALAMANDER TRAIL 2025",
+    "date": "25.10.2025.",
+    "url": "https://gb3timing.com/dogadjaj/3-salamander-trail-2025/",
+    "country": "bih"
   },
   {
     "name": "Apfel Arena Makarska Half Marathon",
@@ -744,9 +680,21 @@ const data = [
     "country": "ser"
   },
   {
+    "name": "10. Dame trče",
+    "date": "26.10.2025.",
+    "url": "https://trka.rs/events/741-10-dame-tr%C4%8De/",
+    "country": "ser"
+  },
+  {
     "name": "Halloween Run",
     "date": "31.10.2025.",
     "url": "https://utrka.com/utrke/halloween/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "Cres & Lošinj Trail 2025",
+    "date": "01.11.2025.",
+    "url": "https://utrka.com/utrke/cresilosinjtrail/2025/",
     "country": "cro"
   },
   {
@@ -762,15 +710,41 @@ const data = [
     "country": "ser"
   },
   {
+    "name": "24. Leskovački polumaraton",
+    "date": "02.11.2025.",
+    "location": "Leskovac",
+    "url": "https://runtrace.net/?event=leskovac2025",
+    "country": "ser"
+  },
+  {
+    "name": "Borski međunarodni polumaraton 2025",
+    "date": "02.11.2025.",
+    "location": "Bor",
+    "url": "https://runtrace.net/?event=bor2025",
+    "country": "ser"
+  },
+  {
     "name": "14. Zagrebački noćni cener",
     "date": "09.11.2025.",
     "url": "https://utrka.com/utrke/zgnocni10k/2025/",
     "country": "cro"
   },
   {
+    "name": "BANJA LUKA RUN WEEKEND",
+    "date": "16.11.2025.",
+    "url": "https://gb3timing.com/dogadjaj/banja-luka-run-weekend/",
+    "country": "bih"
+  },
+  {
     "name": "42. Polumaraton Nin-Zadar 2025.",
     "date": "22.11.2025.",
     "url": "https://utrka.com/utrke/ninzadar/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "Adria Advent Maraton 2025.",
+    "date": "29.11.2025.",
+    "url": "https://utrka.com/utrke/aam/2025/",
     "country": "cro"
   },
   {
@@ -789,6 +763,12 @@ const data = [
     "name": "12. Zagrepčanka 512",
     "date": "13.12.2025.",
     "url": "https://utrka.com/utrke/zagrepcanka/2025/",
+    "country": "cro"
+  },
+  {
+    "name": "6. Adventska utrka Karlovac",
+    "date": "13.12.2025.",
+    "url": "https://utrka.com/utrke/adventkarlovac/2025/",
     "country": "cro"
   },
   {
@@ -848,9 +828,33 @@ const data = [
     "country": "cro"
   },
   {
+    "name": "6. Medvednica trail",
+    "date": "24.05.2026.",
+    "url": "https://utrka.com/utrke/medvednicatrail/2026/",
+    "country": "cro"
+  },
+  {
     "name": "5. CRO5RUN",
     "date": "30.05.2026.",
     "url": "https://utrka.com/utrke/cro5run/2026/",
     "country": "cro"
+  },
+  {
+    "name": "14. Karlovački cener",
+    "date": "12.06.2026.",
+    "url": "https://utrka.com/utrke/karlovackicener/2026/",
+    "country": "cro"
+  },
+  {
+    "name": "ČK10 - Čakovečki noćni cener 2026.",
+    "date": "21.06.2026.",
+    "url": "https://utrka.com/utrke/cakoveccener/2026/",
+    "country": "cro"
+  },
+  {
+    "name": "8. Noćna 10ka Zagreb i polumaraton",
+    "date": "11.07.2026.",
+    "url": "https://utrka.com/utrke/nocna10ka/2026/",
+    "country": "cro"
   }
-];
+]
