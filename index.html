@@ -22,10 +22,30 @@
         </select>
         <button id="show-all-btn">Prikaži sve</button>
     </div>
+    <div id="loadingModal" class="loading-modal">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
 
     <div id="data-container" class="data-container"></div>
-    <script src="data.js"></script>
     <script src="script.js"></script>
+    <script>
+        // Replace this URL with your actual Apps Script Web App URL
+        const apiUrl = "https://script.googleusercontent.com/macros/echo?user_content_key=AehSKLjYeyD69CClmMm7P8HpyjkCkzGHN5slB-Z9wWCDsawnMRrVnDph3WEdef8k025S8jmXLe6ChPn9TLeGWHm6jwlPinDJZccmBPm5IxD9ec-7tvDTYFIdYeRriTHwLsc1XqZuXEd4bogyQ1SlBg6dF6cIBk8yQb_iZ-lZ09ebfJS0IVsTvxqiRn4K7J5kq5PQNbpgqozUEohyCO8XWvlS9MavaMUPrs-MR9x-UU0s8EUyX-k38GdRLphavOkWLnoy0bJQgSc01uUzImz0FN_L3g1lX6f1rA&lib=MwxKcy85NWtUfvXkRBlz4LyfRHul_JHjD";
+
+        fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                console.log('data', data)
+                init(data);
+                document.getElementById("loadingModal").style.display = "none";
+            })
+            .catch(error => {
+                console.error("Greška pri fetchovanju podataka:", error);
+            });
+    </script>
 </body>
 
 </html>
