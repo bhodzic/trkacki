@@ -3,7 +3,8 @@ var freshData;
 const COUNTRIES = {
     "ser": "Srbija",
     "cro": "Hrvatska",
-    "bih": "BiH"
+    "bih": "BiH",
+    "reg": "Region"
 }
 
 function getMonth(date) {
