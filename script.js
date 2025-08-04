@@ -63,24 +63,16 @@ function displayGroupedEvents(groupedEvents) {
             const eventCard = document.createElement("div");
             eventCard.classList.add("event-card");
 
-            const eventDateDiv = `<div class="event-date-wrapper"><i class="far fa-calendar-alt"></i><span class="event-date">${event.date}</span><div>`;
+            const eventDate = `<div>
+                <div class="event-date">${event.date}</div>
+                <a href=${event.url} class="event-info-details" target="blank">Više detalja</a>
+            </div>`;
+            const eventInfo = `<div class="event-info">${event.name}</div>`;
+            const eventButton = `<div><a href=${event.url} class="event-info-details" target="blank">Više detalja</a></div>`;
 
-            const eventInfo = document.createElement("div");
-            eventInfo.classList.add("event-info");
+            eventCard.insertAdjacentHTML("beforeend", eventDate);
+            eventCard.insertAdjacentHTML("beforeend", eventInfo);
 
-            const eventTitle = document.createElement("h2");
-            eventTitle.classList.add("event-title");
-            eventTitle.textContent = event.name;
-            eventInfo.appendChild(eventTitle);
-
-            const eventButton = document.createElement("a");
-            eventButton.textContent = "Više detalja";
-            eventButton.href = event.url;
-            eventButton.target = "_blank";
-            eventInfo.appendChild(eventButton);
-
-            eventCard.appendChild(eventInfo);
-            eventCard.insertAdjacentHTML("beforeend", eventDateDiv);
             container.appendChild(eventCard);
         });
     }
