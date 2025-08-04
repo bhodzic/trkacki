@@ -147,15 +147,8 @@ function populateCountryFilter() {
 
 }
 
-function getFreshData(data) {
-    return data.filter(event => {
-        let today = new Date();
-        return (parseCustomDate(event.date) - today > 0)
-    });
-}
-
 function init(data) {
-    freshData = getFreshData(data);
+    freshData = data;
     // Initialize and display grouped events
     populateMonthFilter();
     populateCountryFilter();
