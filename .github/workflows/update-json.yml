@@ -5,6 +5,9 @@ on:
     - cron: '0 7 * * *'  # Svaki dan u 06:00 UTC (08:00 u Srbiji)
   workflow_dispatch:       # Omogući ručno pokretanje
 
+permissions:
+  contents: write  # <== Ovim daš permission unutar workflowa
+
 jobs:
   update-json:
     runs-on: ubuntu-latest
@@ -12,6 +15,8 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}  # <== ovo koristi ugrađeni token
 
       - name: Fetch JSON from Google Sheets Web App
         run: |
