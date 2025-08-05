@@ -33,7 +33,7 @@
     <script src="script.js"></script>
     <script>
         const apiUrl = "https://script.google.com/macros/s/AKfycbzQr3-8bJbew-3pn91to1vZ4i2-5puxRRqBUllKzLctv8AlN0K4AczLHSFZJTdHUy3H/exec"
-        fetch(apiUrl)
+        fetch('data.json')
             .then(response => response.json())
             .then(data => {
                 init(data);
