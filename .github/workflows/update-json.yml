@@ -1,0 +1,31 @@
+name: Update data.json from Google Sheets Web App
+
+on:
+  schedule:
+    - cron: '0 7 * * *'  # Svaki dan u 06:00 UTC (08:00 u Srbiji)
+  workflow_dispatch:       # Omogući ručno pokretanje
+
+jobs:
+  update-json:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Fetch JSON from Google Sheets Web App
+        run: |
+          curl -L -o data.json "https://script.google.com/macros/s/AKfycbzQr3-8bJbew-3pn91to1vZ4i2-5puxRRqBUllKzLctv8AlN0K4AczLHSFZJTdHUy3H/exec"
+
+      - name: Commit and push if data changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+
+          git add data.json
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "Auto update: data.json from Google Sheets"
+            git push
+          fi
