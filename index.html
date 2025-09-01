@@ -32,8 +32,7 @@
     <div id="data-container" class="data-container"></div>
     <script src="script.js"></script>
     <script>
-        const apiUrl = "https://script.google.com/macros/s/AKfycbzQr3-8bJbew-3pn91to1vZ4i2-5puxRRqBUllKzLctv8AlN0K4AczLHSFZJTdHUy3H/exec"
-        fetch('data.json')
+        fetch('data.json?t=' + new Date().getTime())
             .then(response => response.json())
             .then(data => {
                 init(data);
