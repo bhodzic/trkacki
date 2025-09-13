@@ -2,7 +2,7 @@ name: Update data.json from Google Sheets Web App
 
 on:
   schedule:
-    - cron: '0 7 * * *'  # Svaki dan u 06:00 UTC (08:00 u Srbiji)
+    - cron: '0 7 * * *'  # Svakog dana u 07:00 UTC (08:00 zimi / 09:00 leti u Srbiji)
   workflow_dispatch:       # Omogući ručno pokretanje
 
 permissions:
