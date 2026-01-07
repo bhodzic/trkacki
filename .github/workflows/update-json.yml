@@ -20,7 +20,7 @@ jobs:
 
       - name: Fetch JSON from Google Sheets Web App
         run: |
-          curl -L -o data.json "https://script.google.com/macros/s/AKfycbzQr3-8bJbew-3pn91to1vZ4i2-5puxRRqBUllKzLctv8AlN0K4AczLHSFZJTdHUy3H/exec"
+          curl -L -o data.json "https://script.google.com/macros/s/AKfycbzQDbKdc5_acMVHcU0Ny_8Q9Tz_FLgNbn1z6P79dUETpals0qZRY4tSpj_y9untP8XJ/exec"
 
       - name: Commit and push if data changed
         run: |
